@@ -6,26 +6,27 @@
     <meta name="keywords" content="##, ##, ##">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="Bootcamp Project One - Pixel Pioneers" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" type="image/ico" sizes="16x16"
         href="./assets/Images/web_icon.ico">
     <noscript>JavaScript is unavailable or turned off.<bs>
 	      Many features will not work properly<bs>
               due to this.</noscript>
-    <title>Project One - #### Needs a title</title>
+    <title>Project One - House for sale listings and map something</title>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1wqX6G8-e-3K0fsIa5WlKQqeVM9HD6jQ&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+
   </head>
-
-  <body>
-    <header>
-       <h1>Give me a heading please</h1>
-    </header>
-    
-    <nav>            </nav>
-
+   <body>
+    <gmp-map center="40.12150192260742,-100.45039367675781" zoom="4" map-id="DEMO_MAP_ID">
+      <gmp-advanced-marker position="40.12150192260742,-100.45039367675781" title="My location"></gmp-advanced-marker>
+    </gmp-map>
+    <div class="container">
+      <video class="aerial-view-media" muted autoplay loop>
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
     <footer>
       <small>
         Copyright © Pixel Pioneers
@@ -35,4 +36,4 @@
    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
    <script src="./assets/js/script.js"></script>
   </body>
-</html>
+  </html>
