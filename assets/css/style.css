@@ -1,13 +1,5 @@
       gmp-map {
-        height: 25%;
-      }
-
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
+        height: 45%;
       }
 
       html,
@@ -21,12 +13,12 @@
       
       .aerial-view-media {
         object-fit: contain;
-        height: 100%;
-        width: 100%;
+        height: 50%;
+        width: 50%;
       }
       
       .container {
-        display: flex;
+        display: block;
         overflow: hidden;
         position: relative;
         align-items: center;
