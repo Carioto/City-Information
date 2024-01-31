@@ -6,7 +6,8 @@
     <meta name="keywords" content="##, ##, ##">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="Bootcamp Project One - Pixel Pioneers" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <noscript>JavaScript is unavailable or turned off.<bs>
@@ -18,12 +19,12 @@
 
   </head>
    <body>
-  <div class="container" id="map">
-    <gmp-map center="40.12150192260742,-100.45039367675781" zoom="4" map-id="DEMO_MAP_ID">
+  <div class="container" >
+    <gmp-map center="40.12150192260742,-100.45039367675781" zoom="4" map-id="DEMO_MAP_ID" id="map">
       <gmp-advanced-marker position="40.12150192260742,-100.45039367675781" title="My location"></gmp-advanced-marker>
     <gmp-advanced-marker position="41.12150192260742,-100.45039367675781" title="secfondlocation"></gmp-advanced-marker>
     </gmp-map>
-  </div>
+   
 
    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
    <script src="./assets/js/script.js"></script>
