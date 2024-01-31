@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html lang="en-US"> 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="David Carioto, Joshua Cherry, Rebecca Jiwanmall">
-    <meta name="keywords" content="##, ##, ##">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Bootcamp Project One - Pixel Pioneers" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/css/style.css">
+<html lang="en-US">
 
-    <noscript>JavaScript is unavailable or turned off.<bs>
-	      Many features will not work properly<bs>
-              due to this.</noscript>
-    <title>Project One - House for sale listings and map something</title>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByqpH9S7WL4KUefelxOFdmNypoSlwTANI&callback=console.debug&libraries=maps,marker&v=beta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="David Carioto, Joshua Cherry, Rebecca Jiwanmall">
+  <meta name="keywords" content="##, ##, ##">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="Bootcamp Project One - Pixel Pioneers" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <noscript>JavaScript is unavailable or turned off.<bs>
+      Many features will not work properly<bs>
+        due to this.</noscript>
+  <title>Project One - House for sale listings and map something</title>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByqpH9S7WL4KUefelxOFdmNypoSlwTANI&callback=console.debug&libraries=maps,marker&v=beta">
     </script>
 
-  </head>
-   <body>
+</head>
+
+<body>
   <div class="container" id="map">
     <gmp-map center="40.12150192260742,-100.45039367675781" zoom="4" map-id="DEMO_MAP_ID">
-      <gmp-advanced-marker position="40.12150192260742,-100.45039367675781" title="My location"></gmp-advanced-marker>
-    <gmp-advanced-marker position="41.12150192260742,-100.45039367675781" title="secfondlocation"></gmp-advanced-marker>
+      <gmp-advanced-marker position="39.952583, -75.165222" title="Philadelphia"></gmp-advanced-marker>
+      <gmp-advanced-marker position="29.7604, -95.3698" title="Houston"></gmp-advanced-marker>
+      <gmp-advanced-marker position="41.8781, -87.6298" title="Chicago"></gmp-advanced-marker>
+      <gmp-advanced-marker position="36.1627, -86.7816" title="Nashville"></gmp-advanced-marker>
+      <gmp-advanced-marker position="40.7128, -74.0060" title="New York"></gmp-advanced-marker>
+      <gmp-advanced-marker position="47.6061, -122.3328" title="Seattle"></gmp-advanced-marker>
+      <gmp-advanced-marker position="33.4484, -112.0740" title="Phoenix"></gmp-advanced-marker>
+      <gmp-advanced-marker position="37.7749, -122.4194" title="San Francisco"></gmp-advanced-marker>
+      <gmp-advanced-marker position="34.0549, -118.2426" title="Los Angeles"></gmp-advanced-marker>
+      <gmp-advanced-marker position="35.2271, -80.8431" title="Charlotte"></gmp-advanced-marker>
+      <gmp-advanced-marker position="40.7608, -111.8910" title="Salt Lake City"></gmp-advanced-marker>
+      <gmp-advanced-marker position="39.7392, -104.9903" title="Denver"></gmp-advanced-marker>
+      <gmp-advanced-marker position="40.7178, -74.0431" title="Jersey City"></gmp-advanced-marker>
+
+
+
     </gmp-map>
   </div>
 
-   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-   <script src="./assets/js/script.js"></script>
-  </body>
-  </html>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
