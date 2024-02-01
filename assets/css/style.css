@@ -1,5 +1,5 @@
       gmp-map {
-        height: 45%;
+        height: 75%;
       }
 
       html,
@@ -28,3 +28,8 @@
         max-height: 780px;
         max-width: 780px;
       }  
+ 
+    .center-text {
+      text-align: center;
+      border: 1px solid crimson;
+    }
