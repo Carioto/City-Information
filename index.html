@@ -9,24 +9,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="author" content="David Carioto, Joshua Cherry, Rebecca Jiwanmall">
-  <meta name="keywords" content="##, ##, ##">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="Description" content="Bootcamp Project One - Pixel Pioneers" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <noscript>JavaScript is unavailable or turned off.<bs>
-      Many features will not work properly<bs>
-        due to this.</noscript>
+    <noscript>JavaScript is unavailable or turned off.<bs>
+      Many features will not work properly due to this.</noscript>
   <title>Project One - Selected cities Evironmental Data</title>
   <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByqpH9S7WL4KUefelxOFdmNypoSlwTANI&callback=console.debug&libraries=maps,marker&v=beta">
     </script>
-
 </head>
 
 <body>
@@ -47,13 +35,13 @@
       <gmp-advanced-marker position="40.7178, -74.0431" title="Jersey City"></gmp-advanced-marker>
     </gmp-map>
 
-    <div class="pure-g center-text">
+    <div class="pure-g center-text" id="respEl">
       <div class="pure-u-1-3" id="aqindex">
        <p class="pure-u-1-3"><img id="aqiImg" src="./assets/images/aqi_left.jpg"></p>
-        <p class="pure-u-1-3" id="aqicent">
-          <span>AQI</span>
-          <span id="aqinum"></span><br>
-          <span><a href="https://aqicn.org/scale/" target="_blank">For More Info:<br>aqicn.org</a></span>
+       <p class="pure-u-1-3" id="aqicent">
+         <span>AQI</span>
+         <span id="aqinum"></span><br>
+         <span><a href="https://aqicn.org/scale/" target="_blank">For More Info:<br>aqicn.org</a></span>
         </p>
         <p class="pure-u-1-3"><img id="aqiImg" src="./assets/images/aqi_right.jpg"></p>
       </div>
@@ -61,10 +49,12 @@
         <span >Data for:</span><br>
         <span id="pickcity"></span>
       </div>
-      <div class="pure-u-1-3"><p>Thirds</p></div>
-  </div>
-
-  
+      <div class="pure-u-1-3"><p></p>
+        <div>UV Index</div>
+        <p class="pure-u-1-2"><img id="aqiImg" src="./assets/images/uv_index.PNG"></p>
+        <span class="pure-u-1-2" id="uvIndex"></span>  
+      </div>
+    </div>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="./assets/js/script.js"></script>
