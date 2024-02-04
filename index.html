@@ -17,7 +17,7 @@
   <title>Selected Cities Evironmental and Fuel Data</title>
   <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByqpH9S7WL4KUefelxOFdmNypoSlwTANI&callback=console.debug&libraries=maps,marker&v=beta">
-    </script>
+  </script>
 </head>
 
 <body>
@@ -38,43 +38,43 @@
       <gmp-advanced-marker position="40.7178, -74.0431" title="Jersey City"></gmp-advanced-marker>
     </gmp-map>
   </div>
+
     <div class="pure-g center-text" id="data_block">
       <div class="pure-u-1-3" id="aqindex">
-       <p class="pure-u-1-3"><img id="aqiImg" src="./assets/images/aqi_left.jpg"></p>
-       <p class="pure-u-1-3" id="aqicent">
-         <span class="indextext">Air
-              Quality<br>
-              Index</span><br>
-         <span id="aqinum">&nbsp</span><br>
-         <span>For More Info:<br><a href="https://aqicn.org/scale/" target="_blank">aqicn.org</a></span>
-        </p>
-        <p class="pure-u-1-3"><img id="aqiImg" src="./assets/images/aqi_right.jpg"></p>
+         <p class="pure-u-1-3"><img id="aqiImg" src="./assets/images/aqi_left.jpg"></p>
+         <p class="pure-u-1-3" id="aqicent">
+            <span class="indextext">Air Quality<br>Index</span><br>
+            <span id="aqinum">&nbsp</span><br>
+            <span>For More Info:<br><a href="https://aqicn.org/scale/" target="_blank">aqicn.org</a></span></p>
+         <p class="pure-u-1-3"><img id="aqiImg" src="./assets/images/aqi_right.jpg"></p>
       </div>
+    
       <div class="pure-u-1-3" id="datatag">
-        <span >Data for:</span><br>
-        <span id="pickcity">&nbsp</span>
+         <span >Data for:</span><br>
+         <span id="pickcity">&nbsp</span>
         <div id="fuelbut">
-        <button class="uk-button uk-button-default uk-margin-small-right" type="button" 
-        uk-toggle="target: #modal-example" >View Fuel Prices</button>
-        <a  href="#modal-example" uk-toggle ></a>
-        <div id="modal-example" uk-modal>
-         <div class="uk-modal-dialog uk-modal-body">
-          <h2 class="uk-modal-title">Average Fuel Prices</h2>
-           <p id="citynamed"></p>
-           <p><span>Regular Gasoline  $</span><span id="reggas"></span></p>
-           <p><span>Mid-Grade Gasoline  $</span><span id="midgas"></span></p>
-           <p><span>Premium Gasoline  $</span><span id="pregas"></span></p>
-           <p class="uk-text-right">
-           <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
-           </p>
+          <button class="uk-button uk-button-default uk-margin-small-right" type="button" 
+                 uk-toggle="target: #modal-example" >View Fuel Prices</button>
+          <a  href="#modal-example" uk-toggle ></a>
+          <div id="modal-example" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+             <h2 class="uk-modal-title">Average Fuel Prices</h2>
+              <p id="citynamed"></p>
+              <p><span>Regular Gasoline  $</span><span id="reggas"></span></p>
+              <p><span>Mid-Grade Gasoline  $</span><span id="midgas"></span></p>
+              <p><span>Premium Gasoline  $</span><span id="pregas"></span></p>
+              <p class="uk-text-right">
+              <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button></p>
+            </div>
+          </div>
         </div>
       </div>
-  </div>
-      </div>
+    
       <div class="pure-u-1-3 indextext" id="uvtag"><p></p>
-        <div>UV Index - Daily Max</div>
+        <p>UV Index - Daily Max</p>
         <span class="pure-u-1-2" id="uvIndex"></span>  
         <p class="pure-u-1-2"><img id="aqiImg" src="./assets/images/uv_index.PNG"></p>
+        <p>For More Info:<br><a href="https://www.epa.gov/sunsafety/uv-index-scale-0" target="_blank">epa.gov</a></p>
       </div>
     </div>
 

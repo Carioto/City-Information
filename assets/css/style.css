@@ -23,7 +23,6 @@
     .center-text {
       margin-top: 20px;
       text-align: center;
-      height: 17%;
     }
 
 .indextext{
@@ -37,7 +36,8 @@
   display:flex;
   align-items: center;
 }
-
+#uvtag{
+}
 #aqinum {
   font-size: 50px;
   font-weight: 600;
@@ -46,6 +46,7 @@
   font-family: fantasy;
   font-size: 33px;
   color: brown;
+  text-align: center;
 }
 @media screen and (max-width: 1024px) {
   #data_block
