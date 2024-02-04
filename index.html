@@ -6,12 +6,15 @@
     <meta name="keywords" content="##, ##, ##">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="Bootcamp Project One - Pixel Pioneers" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.18.0/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.18.0/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.18.0/dist/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
     <noscript>JavaScript is unavailable or turned off.<bs>
       Many features will not work properly due to this.</noscript>
-  <title>Project One - Selected cities Evironmental Data</title>
+  <title>Selected Cities Evironmental and Fuel Data</title>
   <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByqpH9S7WL4KUefelxOFdmNypoSlwTANI&callback=console.debug&libraries=maps,marker&v=beta">
     </script>
@@ -19,7 +22,7 @@
 
 <body>
   <div class="container" id="map">
-    <gmp-map center="40.12150192260742,-100.45039367675781" zoom="4" map-id="DEMO_MAP_ID">
+    <gmp-map center="38.935211394809954,-95.81347656249999" zoom="4.75" map-id="DEMO_MAP_ID">
       <gmp-advanced-marker position="39.952583, -75.165222" title="Philadelphia"></gmp-advanced-marker>
       <gmp-advanced-marker position="29.7604, -95.3698" title="Houston"></gmp-advanced-marker>
       <gmp-advanced-marker position="41.8781, -87.6298" title="Chicago"></gmp-advanced-marker>
@@ -34,25 +37,44 @@
       <gmp-advanced-marker position="39.7392, -104.9903" title="Denver"></gmp-advanced-marker>
       <gmp-advanced-marker position="40.7178, -74.0431" title="Jersey City"></gmp-advanced-marker>
     </gmp-map>
-
-    <div class="pure-g center-text" id="respEl">
+  </div>
+    <div class="pure-g center-text" id="data_block">
       <div class="pure-u-1-3" id="aqindex">
        <p class="pure-u-1-3"><img id="aqiImg" src="./assets/images/aqi_left.jpg"></p>
        <p class="pure-u-1-3" id="aqicent">
-         <span>AQI</span>
-         <span id="aqinum"></span><br>
-         <span><a href="https://aqicn.org/scale/" target="_blank">For More Info:<br>aqicn.org</a></span>
+         <span class="indextext">Air
+              Quality<br>
+              Index</span><br>
+         <span id="aqinum">&nbsp</span><br>
+         <span>For More Info:<br><a href="https://aqicn.org/scale/" target="_blank">aqicn.org</a></span>
         </p>
         <p class="pure-u-1-3"><img id="aqiImg" src="./assets/images/aqi_right.jpg"></p>
       </div>
       <div class="pure-u-1-3" id="datatag">
         <span >Data for:</span><br>
-        <span id="pickcity"></span>
+        <span id="pickcity">&nbsp</span>
+        <div id="fuelbut">
+        <button class="uk-button uk-button-default uk-margin-small-right" type="button" 
+        uk-toggle="target: #modal-example" >View Fuel Prices</button>
+        <a  href="#modal-example" uk-toggle ></a>
+        <div id="modal-example" uk-modal>
+         <div class="uk-modal-dialog uk-modal-body">
+          <h2 class="uk-modal-title">Average Fuel Prices</h2>
+           <p id="citynamed"></p>
+           <p><span>Regular Gasoline  $</span><span id="reggas"></span></p>
+           <p><span>Mid-Grade Gasoline  $</span><span id="midgas"></span></p>
+           <p><span>Premium Gasoline  $</span><span id="pregas"></span></p>
+           <p class="uk-text-right">
+           <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+           </p>
+        </div>
       </div>
-      <div class="pure-u-1-3"><p></p>
-        <div>UV Index</div>
-        <p class="pure-u-1-2"><img id="aqiImg" src="./assets/images/uv_index.PNG"></p>
+  </div>
+      </div>
+      <div class="pure-u-1-3 indextext" id="uvtag"><p></p>
+        <div>UV Index - Daily Max</div>
         <span class="pure-u-1-2" id="uvIndex"></span>  
+        <p class="pure-u-1-2"><img id="aqiImg" src="./assets/images/uv_index.PNG"></p>
       </div>
     </div>
 
