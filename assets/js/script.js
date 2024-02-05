@@ -16,6 +16,8 @@ var activateModal = document.querySelector(".uk-button");
 var lat = 0;
 var lon= 0;
 var cityClick;
+var localData;
+var locaqi;
 
 function getCity(event) {
 
@@ -24,25 +26,25 @@ function getCity(event) {
       pickCity.textContent="Please select a marker";
       return;
     }else{
-  pickCity.textContent=cityClick;
-  var airQInd = airQEnd + cityClick + airQApi;
-  fetch(airQInd)
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data) {
-    var airQdata = data;
-    var aqiEl = airQdata.data.aqi;
-    aqiTarget.textContent=aqiEl;
+      pickCity.textContent=cityClick;
+      var airQInd = airQEnd + cityClick + airQApi;
+      fetch(airQInd)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        var airQdata = data;
+        var aqiEl = airQdata.data.aqi;
+        aqiTarget.textContent=aqiEl;
   })
   
   var getCoor = coorEnd + cityClick + "&limit=1&appid=" + openWApi
-   fetch(getCoor)
-   .then(function(response){
-      return response.json();
+  fetch(getCoor)
+  .then(function(response){
+    return response.json();
    })
    .then (function(data) {
-    var dataQ = data;
+     var dataQ = data;
      lat = dataQ[0].lat;
      lon = dataQ[0].lon;
     var apiUV = "openuv-rupcfgrls3xrllu-io"
@@ -61,7 +63,16 @@ function getCity(event) {
     uvIndexEl.textContent=maxUv;
   })
 })}
+var localCity=(cityClick);
+ var PJson=JSON.parse(localStorage.getItem('localCity')) || [];
+     PJson.push(localCity);
+     if (PJson.length > 10){
+      PJson.shift();
+     };
+ localStorage.setItem('localCity', JSON.stringify(PJson));
 }
+
+
 function getGasData() {
   cityNamed.textContent = "One moment please...";
   gasDataUrl= gasEndPoint + lon + "&lat=" + lat;
