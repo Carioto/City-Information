@@ -7,12 +7,21 @@ body {
   width: 100%;
   justify-content: center;
 }
+#modalel{
+  background-color: aqua;
+}
+#modaltitle{
+  text-decoration: underline;
+}
 #data_block p{ 
   margin: 0 !important;
 }
 .tble{
-  width: 80%;
+  width: 60%;
   margin: auto;
+}
+th, tr {
+  color: darkred !important;
 }
 #fuelbut{
   margin:20px;
@@ -60,6 +69,7 @@ body {
 #datatag,
 #uvtag {
     width: 99%;
+    margin-top: 5px;
 }
 button{
     font-size: 10px;
@@ -67,4 +77,7 @@ button{
 #fuelbut{
     margin:2px;
 } 
+.tble{ 
+    width:90%;
+}
 }

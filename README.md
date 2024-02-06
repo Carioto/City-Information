@@ -1,25 +1,27 @@
-# Project_One
+# Select Cities Environmental and Gas Prices
 
 ## Description
 
-As professional developers, we created a google map that consists of cities that you can visit. We provided informative details about each city such as the air quality, UV index, longtitude and latitude.Our motivation for creating this project was to help those that are visiting specific cities. The most important thing we learned was how to work as an efficient team and bring about a project that works.
+As professional developers, we created a google map that consists of cities that you can visit. We provided informative details about each city such as the air quality, UV index, average gas pricing within selected city, longtitude and latitude. Our motivation for creating this project was to help those that are visiting major cities. The most important thing we learned was how to work as an efficient team and bring about a project that works.
 
 
 ## Installation:
 
+
 ## Usage:
- ![alt text](assets/images/screenshot.jpg)
+ ![Initial page](assets/images/screenshot.jpg)
+ ![With city picked](assets/images/screenshot_picked.jpg)
+ ![With gas price search](assets/images/screenshot_gas.jpg)
 
 
 ## Credits
-
-"https://cdn.jsdelivr.net/npm/uikit@3.18.0/dist/css/uikit.min.css"
-https://cdn.jsdelivr.net/npm/uikit@3.18.0/dist/js/uikit.min.js
-https://cdn.jsdelivr.net/npm/uikit@3.18.0/dist/js/uikit-icons.min.js
-https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css
-https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css
-https://maps.googleapis.com/maps/api/js?key=AIzaSyByqpH9S7WL4KUefelxOFdmNypoSlwTANI&callback=console.debug&libraries=maps,marker&v=beta
-
+We utilized the uikit and pure frameworks to create many pieces of this app.  
+We optained data from the following api's:
+ google maps -- map markers
+ openuv.io -- UV Index
+ collect.api.com -- gas prices
+ aqicn.org -- Air Quality Index
+ openweathermap.org -- longitude and latitude data
 
 ## MIT License
 

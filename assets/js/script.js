@@ -18,6 +18,7 @@ var lon= 0;
 var cityClick;
 var localData;
 var locaqi;
+var tbody = document.querySelector("#bodyTable");
 
 function getCity(event) {
 
@@ -47,7 +48,7 @@ function getCity(event) {
      var dataQ = data;
      lat = dataQ[0].lat;
      lon = dataQ[0].lon;
-    var apiUV = "openuv-rupcfgrls3xrllu-io"
+    var apiUV = "openuv-rupcfgrls3xp3tf-io"
     fetch(`https://api.openuv.io/api/v1/uv?lat=${lat}&lng=${lon}`, {
       method: 'GET',
       headers: {
@@ -78,25 +79,55 @@ function getGasData() {
   gasDataUrl= gasEndPoint + lon + "&lat=" + lat;
   fetch(gasDataUrl, {
       headers: {
-          'authorization': 'apikey 5ckicsZ4HYYUCe73BbPN3e:6dYxg270wFh5He9d4LUUFl',
+          'authorization': 'apikey 3ZTBTe6yHfTYDORVYw9xh1:4Vi3MuMsBKyLjPWZnK8Ifn',
           'content-type': 'application/json'
       }})
       .then(function(response){
           return response.json();
       })
       .then(function(data){
-        var regGasPrice = data.result.gasoline;
-        var midGasPrice = data.result.midGrade;
-        var preGasPrice = data.result.premium;
+        var regGasPrice = Math.round(data.result.gasoline*100)/100;
+        var midGasPrice = Math.round(data.result.midGrade*100)/100;
+        var preGasPrice = Math.round(data.result.premium*100)/100;
         cityNamed.textContent = cityClick;
           regGas.textContent = regGasPrice;
           midGas.textContent = midGasPrice;
           preGas.textContent = preGasPrice;
-      }
-      )
-  };
-  
-  activateModal.addEventListener("click", getGasData);
+          var localgas = {
+            city: cityClick,
+            reg: regGasPrice,
+            mid: midGasPrice,
+            pre: preGasPrice
+          };
+         var gasRowJson=JSON.parse(localStorage.getItem('localgas')) || [];
+         gasRowJson.push(localgas);
+         if (gasRowJson.length > 8){
+           gasRowJson.shift();
+          };
+          localStorage.setItem('localgas', JSON.stringify(gasRowJson));
+          createTable();
+        }
+        )
+      };
+      
+function createTable(){
+  var gasRowJson=JSON.parse(localStorage.getItem('localgas')) || [];
+  for (i=0; i<gasRowJson.length; i++){
+    var trow = document.createElement("tr");
+    $(trow).append("<td>" + gasRowJson[i].city + "</td><td>$" + gasRowJson[i].reg + 
+    "</td><td>$" + gasRowJson[i].mid + "</td><td>$" + gasRowJson[i].pre + "</td></tr>");
+    tbody.append(trow);
+  }
+}      
+
+window.addEventListener("load", createTable());
+
+activateModal.addEventListener("click", function() {
+  if (!cityClick){
+    pickCity.textContent="Please select a marker";
+    return;
+  }else{
+    getGasData()}});
 
 //Click on map starts function
 mapClick.addEventListener('click', getCity);
