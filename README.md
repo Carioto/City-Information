@@ -1,4 +1,4 @@
-# Select Cities Environmental and Gas Prices
+# City Information
 
 ## Description
 
@@ -6,7 +6,7 @@ As professional developers, we created a google map that consists of cities that
 
 
 ## Installation:
-
+Access this app by navigating to https://carioto.github.io/City-Information/
 
 ## Usage:
  ![Initial page](assets/images/screenshot.jpg)
